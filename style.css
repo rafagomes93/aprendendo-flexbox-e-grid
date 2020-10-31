@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.2rem;
+	font-family: arial;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;	
+	color: #fff;
+}
+
+img{
+	max-width: 100%;
+	display: block;
+}
+
+.header{
+	background-color: #111;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 20px;
+}
+
+.logo{
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.menu{
+	display: flex;
+}
+
+.menu li{
+	margin-left: 10px;
+}
+
+.menu li a{
+	display: block;
+	padding: 10px;
+}
+
+.menu li a:hover{
+	color: red;
+}
+
+/*DESTAQUES - FLEX*/
+
+h1{
+	text-align: center;
+	margin-top: 100px;
+}
+
+.dest{
+	display: flex;
+	flex-wrap: wrap; /*Permite que as imagens vá pra baixo da linha*/
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.dest > div{
+	flex: 1 1 280px; /*img expande, fica menor e sempre ter 200px*/
+	margin: 26px;
+}
