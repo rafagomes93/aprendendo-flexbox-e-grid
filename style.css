@@ -6,6 +6,9 @@
 	font-family: arial;
 	box-sizing: border-box;
 }
+body{
+	margin-bottom: 30px;
+}
 
 a{
 	text-decoration: none;	
@@ -65,4 +68,44 @@ h1{
 .dest > div{
 	flex: 1 1 280px; /*img expande, fica menor e sempre ter 200px*/
 	margin: 26px;
+}
+
+/*GRID 1*/
+
+.news{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: 945px;
+	margin: 0 auto;
+	grid-gap: 26px; /*equivalente ao margin*/
+}
+
+/*seleciona apartir do quarto item*/
+.news > div:nth-child(n + 4){
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+	align-items: center;
+}
+
+.news > div.anuncio{
+	grid-column: 1; /*item fica posicionada na primeira coluna*/
+	grid-row: 2 / 5; /*item fica posicionada na linha 2 at? a 5. LINHAS ENTRE O ITEM.*/
+	display: block; /*volta ao tamanho original*/
+}
+
+@media (max-width: 600px){
+	.news{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.news > div:nth-child(n + 4){
+		display: block;
+	}
+	
+	.news > div.anuncio{
+		grid-column: auto;
+		grid-row: auto;
+		order: -1; /*coloca o anuncio na primeira posi??o.*/
+	}
 }
