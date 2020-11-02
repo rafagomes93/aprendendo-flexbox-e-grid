@@ -109,3 +109,34 @@ h1{
 		order: -1; /*coloca o anuncio na primeira posi??o.*/
 	}
 }
+
+/*GRID YOUTUBE*/
+
+.youtube{
+	display: grid;
+	grid-template-columns: 1fr 200px;
+	grid-gap: 20px;
+	max-width: 800px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.sidebar > div{
+	margin-bottom: 10px;
+}
+
+@media (max-width: 600px){
+	.youtube{
+		grid-template-columns: 1fr;
+	}
+	
+	.sidebar{
+		display: flex;
+		overflow: scroll; /*cria um scroll se for diminuido*/
+	}
+	
+	.sidebar > div{
+		flex: 1 0 200px;
+		margin: 0 10px;
+	}
+}
